@@ -6,14 +6,14 @@ import Animal from "./pages/Animal";
 import Layout from "./layouts";
 
 const App = () => (
-  <Layout>
-    <Router history={history}>
+  <Router history={history}>
+    <Layout>
       <Switch>
         <Route path="/" component={Animals} />
         <Route path="/animal/:id" component={Animal} />
       </Switch>
-    </Router>
-  </Layout>
+    </Layout>
+  </Router>
 );
 
 export default App;
