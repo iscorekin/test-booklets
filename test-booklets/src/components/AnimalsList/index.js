@@ -23,7 +23,7 @@ const Item = styled(Link)`
 `;
 
 const AnimalsList = props => (
-    <List className={props.className}>
+    <List>
         {props.data.map(item =>
             <Item to={item.link}>
                 {item.label}
