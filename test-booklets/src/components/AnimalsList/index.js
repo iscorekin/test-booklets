@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const List = styled.div`
-    list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
