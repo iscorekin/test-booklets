@@ -6,7 +6,6 @@ import { fetchAnimals } from "../../store/modules/animals";
 class AnimalsListContainer extends React.Component {
     componentWillMount() {
         this.props.fetchData(`${process.env.PUBLIC_URL}/json/animals.json`);
-        console.log(this.props.animals);
     }
 
     render() {

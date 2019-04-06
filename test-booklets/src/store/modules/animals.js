@@ -8,7 +8,6 @@ export function fetchAnimals(url) {
 const animals = (state = {animals: []}, action) => {
     switch(action.type) {
         case "ANIMALS_FETCH_SUCCESS":
-            console.log(action)
             return {...state, animals: action.payload};
         default:
             return state;
