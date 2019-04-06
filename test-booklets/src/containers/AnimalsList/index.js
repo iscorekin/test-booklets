@@ -14,7 +14,7 @@ class AnimalsListContainer extends React.Component {
                 data={this.props.animals.map(animal => {
                     return {
                         label: animal.name,
-                        link: `Animal/${animal.id}`
+                        link: `${process.env.PUBLIC_URL}/animal/${animal.id}`
                     }
                 })}
             />
