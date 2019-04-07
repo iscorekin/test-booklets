@@ -21,7 +21,7 @@ class AnimalContainer extends React.Component {
         if(animal)
             return animal.name
 
-        return "";
+        return "Животное не найдено!";
     }
 }
 
