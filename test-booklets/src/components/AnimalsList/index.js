@@ -23,8 +23,8 @@ const Item = styled(Link)`
 
 const AnimalsList = props => (
     <List>
-        {props.data.map(item =>
-            <Item to={item.link}>
+        {props.data.map((item, index) =>
+            <Item to={item.link} key={index}>
                 {item.label}
             </Item>
         )}
