@@ -3,11 +3,12 @@ import styled from "styled-components";
 
 const Name = styled.div`
     text-align: center;
+    width: 100%;
 `;
 
 const Animal = props => (
     <Name>
-        <h2>{props.name}</h2>
+        <h1>{props.name}</h1>
     </Name>
 )
 

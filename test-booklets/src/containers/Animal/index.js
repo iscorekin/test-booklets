@@ -5,7 +5,8 @@ import { fetchAnimals } from "../../store/modules/animals";
 
 class AnimalContainer extends React.Component {
     componentWillMount() {
-        this.props.fetchData(`${process.env.PUBLIC_URL}/json/animals.json`);
+        if(!this.props.animals)
+            this.props.fetchData(`${process.env.PUBLIC_URL}/json/animals.json`);
     }
 
     render() {
@@ -14,7 +15,14 @@ class AnimalContainer extends React.Component {
         )
     }
 
-    getName = () => this.props.animals.find(animal => animal.id === this.props.id).name;
+    getName() {
+        const animal = this.props.animals.find(animal => animal.id === this.props.id);
+
+        if(animal)
+            return animal.name
+
+        return "";
+    }
 }
 
 

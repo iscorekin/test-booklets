@@ -8,10 +8,14 @@ const LayoutDiv = styled.div`
   align-items: stretch;
 `;
 
+const Content = styled.div`
+  flex-grow: 1;
+`
+
 const Layout = ({ children }) => (
   <LayoutDiv>
     <AnimalsList />
-    <div>{children}</div>
+    <Content>{children}</Content>
   </LayoutDiv>
 );
 

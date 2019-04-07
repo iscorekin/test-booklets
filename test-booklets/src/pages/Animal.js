@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Animal from "../containers/Animal"
 
-const Animal = () => <p>Конкретное животное</p>;
+const AnimalPage = props => <Animal id={props.match.params.id} />;
 
-export default Animal;
+export default AnimalPage;
