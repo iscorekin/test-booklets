@@ -31,8 +31,8 @@ export default class UISelect extends React.Component {
 
                 <Component>
                     <select>
-                        {this.state.filtered.map(item =>
-                            <option value={item.value}>{item.label}</option>
+                        {this.state.filtered.map((item, index) =>
+                            <option key={index} value={item.value}>{item.label}</option>
                         )}
                     </select>
                 </Component>
