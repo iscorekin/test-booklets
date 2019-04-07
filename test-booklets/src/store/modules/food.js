@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export function fetchAnimals(url) {
+export function fetchFood(url) {
     return dispatch => axios.get(url)
         .then(response => {dispatch({type: "FOOD_FETCH_SUCCESS", payload: response.data})});
 }
