@@ -18,10 +18,15 @@ export default class UISelect extends React.Component {
         super(props)
 
         this.state = {
-            filtered: this.props.data,
+            filtered: []
         }
 
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.data !== this.props.data)
+            this.setState({filtered: this.props.data})
     }
 
     render() {
@@ -42,8 +47,7 @@ export default class UISelect extends React.Component {
 
     handleChange(event) {
         this.setState({
-            filtered: this.props.data.filter(item =>
-                event.target.value === "" || item.label.includes(event.target.value)
+            filtered: this.props.data.filter(item => item.label.includes(event.target.value)
             )
         });
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import Animal from "../containers/Animal"
 import styled from "styled-components";
-import UISelect from "../ui/Select";
+import FoodSelect from "../containers/FoodSelect";
 
 const Page = styled.div`
     margin-left: 4px;
@@ -12,7 +12,7 @@ const Page = styled.div`
 const AnimalPage = props =>
     <Page>
         <Animal id={props.match.params.id} />
-        <UISelect data={[{value: "sdsd", label: "sdss"}]}/>
+        <FoodSelect />
     </Page>;
 
 export default AnimalPage;
